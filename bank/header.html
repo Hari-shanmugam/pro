@@ -1,0 +1,99 @@
+<html>
+
+<head>
+    <title>
+        Header
+    </title>
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        ul.topnav {
+            list-style-type: none;
+            margin-top: 0px;
+            padding-left: 10px;
+            overflow: hidden;
+            background-color: white;
+        }
+        
+        ul.topnav li {
+            float: left;
+        }
+        
+        ul.topnav li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 6px 19px;
+            margin-top: 5px;
+            text-decoration: none;
+        }
+        
+        ul.topnav li.right {
+            float: right;
+        }
+        
+        @media screen and (max-width: 600px) {
+            ul.topnav li.right,
+            ul.topnav li {
+                float: none;
+            }
+        }
+        
+        .fot {
+            font-family: 'Baumans';
+            font-size: 22px;
+            margin-top: 20px;
+        }
+        
+        .btn {
+            border: none;
+            outline: none;
+            padding: 0px 16px;
+            background-color: white;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        /* Style the active class, and buttons on mouse-over */
+        
+        .active,
+        .btn:hover {
+            background-color: #24B2E0;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="topnav" id="myDIV">
+        <li>
+
+            <img src="Blogo.png" width="70px" height="80px"> </li>
+        <li class=" fot"><a href="#news ">RDH </a></li>
+        <li class=" right fot btn"><a href="login.html" target="login.html">Logout</a></li>
+        <li class=" right fot btn"><a href="int.html" target="ContentFrame">Intrest</a></li>
+        <li class="right fot btn"><a href="card.html" target="ContentFrame"> Cards</a></li>
+        <li class="right fot btn"><a href="transfer.html" target="ContentFrame">Transfer</a></li>
+        <li class="right fot btn"><a href="acc.html" target="ContentFrame">My Account & Profile</a></li>
+
+    </ul>
+
+    <script>
+        // Add active class to the current button (highlight it)
+        var header = document.getElementById("myDIV");
+        var btns = header.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                if (current.length > 0) {
+                    current[0].className = current[0].className.replace(" active", "");
+                }
+                this.className += " active";
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+
+        body {
+            margin: 0;
+        }
+        
+        ul.topnav {
+            list-style-type: none;
+            margin-top: 0px;
+            padding-left: 10px;
+            overflow: hidden;
+            background-color: white;
+        }
+        
+        ul.topnav li {
+            float: left;
+        }
+        
+        ul.topnav li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 6px 19px;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+        
+        ul.topnav li.right {
+            float: right;
+        }
+        
+        @media screen and (max-width: 600px) {
+            ul.topnav li.right,
+            ul.topnav li {
+                float: none;
+            }
+        }
+        
+        .fot {
+            font-family: 'Baumans';
+            font-size: 22px;
+            margin-top: 20px;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        /* Create two equal columns that floats next to each other */
+        
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 300px;
+            /* Should be removed. Only for demonstration */
+        }
+        /* Clear floats after the columns */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .container {
+            position: relative;
+            font-family: Arial;
+        }
+        
+        .text-block {
+            position: absolute;
+            bottom: 138px;
+            right: 80px;
+            background-color: white;
+            color: white;
+            padding: 20px;
+            border-radius: 15px 50px 30px;
+            height: 292px;
+            width: 239px;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+        
+        .text-block1 {
+            position: absolute;
+            bottom: 00px;
+            right: 723px;
+            background-color: black;
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+            opacity: .6;
+            height: 500px;
+            width: 234px;
+            border-radius: 0px 50px 50px 0px;
+            padding-top: 96px;
+        }
+        
+        .button {
+            border-radius: 15px 50px 30px;
+        }
+        
+        .button:hover {
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+        
+        a.effect-underline:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            height: 1em;
+            width: 100%;
+            border-bottom: 1px solid;
+            margin-top: 10px;
+            opacity: 0;
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+            transition: opacity 0.35s, transform 0.35s;
+            -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+        }
+        
+        a.effect-underline:hover:after {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        
+        a.effect-box:after,
+        a.effect-box:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            height: 1em;
+            width: 100%;
+            margin-top: 10px;
+            opacity: 0;
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+            transition: opacity 0.35s, transform 0.35s;
+        }
+        
+        a.effect-box:before {
+            border-left: 1px solid;
+            border-right: 1px solid;
+            -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+        }
+        
+        a.effect-box:after {
+            border-bottom: 1px solid;
+            border-top: 1px solid;
+            -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+        }
+        
+        a.effect-box:hover:after,
+        a.effect-box:hover:before {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        
+        .box1 {
+            height: 360px;
+        }
+        
+        .boxt {
+            height: 200px;
+            padding: 15px;
+            background-color: white;
+            box-shadow: 1px 1px;
+        }
+        
+        .zoom {
+            transition: transform .2s;
+            margin: 0 auto;
+        }
+        
+        .zoom:hover {
+            transform: scale(1.1);
+        }
+        
+        .overflow {
+            overflow: hidden;
+        }
+    

@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <style>
+        .fot2 {
+            font-family: 'Baumans';
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        
+        .bod {
+            border: px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fot bod">
+        <h5>Password Requirements:</h5>
+        <p>1.Be a minimum of eight (8) characters in length.</p>
+        <p>2.Be memorized; if a password is written down it must be secure.</p>
+        <p>3.ontain at least one (1) character from three (3) of the following categories: Uppercase letter (A-Z) Lowercase letter (a-z) Digit (0-9) Special character (~`!@#$%^&*()+=_-{}[]\ ...</p>
+        <p>4.Be private.</p>
+    </div>
+    <br>
+    <div>
+        <form>
+            <table>
+                <h4>Change Password:</h4>
+                <font color="black">Current Password:&nbsp; &nbsp;</font>
+                <input type="password" id="curpass" name="uname"><br>
+                <span id="curpass1" style="color: red;"></span>
+                <br>
+                <font color="black"> New Password &nbsp;&nbsp;&nbsp;&nbsp;:&nbsp; &nbsp;</font>
+                <input type="password" placeholder="New Password" id="npass" name="uname"><br>
+                <span id="npass1" style="color: red;"></span>
+                <br>
+                <font color="black">Confirm Password : </font>
+                <input type="password" placeholder="Confirm Password" id="confpass" name=" uname "><br>
+                <span id="cpass1" style="color: red; "></span><br>
+                <input type="button" onclick="changepass()" value="Submit"> &nbsp;&nbsp;&nbsp;
+                <input type="reset" value="Reset">
+                <br><br>
+                <!-- <button class="button " onclick="changepass()">Reset</button> -->
+                <span id="sub1" style="color: red; ">&nbsp;</span>
+            </table>
+        </form>
+    </div>
+    <script>
+        function changepass() {
+            var curpass = document.getElementById("curpass").value;
+            var newpass = document.getElementById("npass").value;
+            var conformpass = document.getElementById("confpass").value;
+
+            if (curpass == "") {
+
+                document.getElementById("curpass1").innerHTML = "*Enter Current password";
+
+            } else {
+
+                document.getElementById("curpass1").innerHTML = " ";
+            }
+            if (newpass == "") {
+                document.getElementById("npass1").innerHTML = "*Enter  password ";
+
+
+            } else {
+
+                document.getElementById("npass1").innerHTML = "";
+            }
+
+            if (conformpass == "" || conformpass == null) {
+                document.getElementById("cpass1").innerHTML = "*Enterccd Password ";
+
+            } else {
+
+                document.getElementById("cpass1").innerHTML = " ";
+            }
+
+            if (newpass != conformpass) {
+                document.getElementById("sub1").innerHTML = "Password in Not Match";
+
+
+            } else {
+                document.getElementById("sub1").innerHTML = "";
+                if (newpass != "" && conformpass != "") {
+                    alert("Password is successfully reset")
+                }
+
+            }
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>
